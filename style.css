@@ -42,3 +42,20 @@ footer { margin-top: 56px; border-top: 1px solid var(--line); padding-top: 16px;
   table, thead, tbody, tr, th, td { display: block; }
   th { border-bottom: none; }
 }
+
+/* Print / PDF: black on white so evidence PDFs stay readable. */
+@media print {
+  html, body { background: #fff !important; color: #000 !important; }
+  .wrap { max-width: none; padding: 0; }
+  p, li, td, th, h1, h2, h3, strong { color: #000 !important; }
+  .en, .meta { color: #333 !important; }
+  a { color: #1a0dab !important; }
+  th { background: #eee !important; }
+  th, td { border-color: #999 !important; }
+  .card { background: #fff !important; border-color: #999 !important; }
+  .card.yt { border-left: 6px solid #cc0000 !important; }
+  code { background: #f2f2f2 !important; }
+  header, footer { border-color: #999 !important; }
+  h2 { break-after: avoid; }
+  tr, .card { break-inside: avoid; }
+}
